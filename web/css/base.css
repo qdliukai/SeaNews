@@ -1,0 +1,160 @@
+body,
+html {
+	height: 100%;
+	font: 20px/40px "microsoft yahei";
+	color: white;
+}
+
+#container {
+	width: 90%;
+	margin: 0 auto;
+	height: 100%;
+}
+
+#header{
+	height: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid #ddd;
+}
+#footer{
+
+}
+
+#main {
+	/*height: 90%;*/
+	/*background: #00c8ff;*/
+}
+
+#center,
+#left,
+#right {
+	height: 100%;
+	float: left;
+}
+
+#right {
+	width: 25%;
+	float: left;
+	/*margin-left: -25%;*/
+}
+
+#left {
+	width: 25%;
+	float: left;
+	/*margin-left: -100%;*/
+}
+
+#center {
+	float: left;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	/*padding-left: 28%;*/
+	width: 45%;
+}
+
+.gcs-footer{
+	width: 100%;
+	text-align: center;
+}
+.gcs-footer .footer-top{
+	margin-top: 10px;
+}
+
+.gcs-footer a{
+	text-decoration: none;
+	padding: 0 10px;
+	vertical-align:middle;
+}
+
+/*导航栏的设置*/
+.nav_box{
+	border: 2px solid plum;
+	/*这里给最大的div（容器），加上紫色的边框、宽度为2像素，边框是实线*/
+}
+.logo{
+	width: 100px;
+	/*加上宽度100像素*/
+	height: 50px;
+	/*加上高度50像素*/
+	line-height: 50px;
+	/*加上行高50像素，这个 行高=高度时 可以使里面的字垂直居中*/
+	background-color: red;
+	/*背景设置成红色，方便观察*/
+	float: left;
+	/*给logo盒子，加上做一个左浮动，*/
+}
+
+/*选择 .nav 下面的 ul 下面的 li*/
+.nav ul li{
+	list-style: none;
+	/*去除 li的*/
+
+	float: left;
+	/*这里给li做的左浮动，可以让li横排显示*/
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	/*设置宽、高、行高*/
+	background-color:orange;
+	/*背景橘色*/
+	border: 1px solid black;
+	/*加一个1像素的黑色实线边框*/
+	text-align: center;
+	/*让里面的字。水平居中*/
+}
+
+.navigation-bar{
+	float:left;
+	height: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.time-span{
+	zoom: 1;
+	padding-right: 20px;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	font-size: 16px;
+	color: #232323;
+	font-weight: bold;
+	position: absolute;
+}
+
+.first-a{
+	zoom: 1;
+	padding-right: 16px;
+	/*border: 3px solid #EC9D19;*/
+	font-size: 25px;
+	color: #0066FF;
+	font-weight: bold;
+	position: absolute;
+}
+
+/*弹出登录框*/
+.login-item input{
+	width:295px;
+	height:40px;
+}
+.login-item a{
+	width:330px;
+	height:50px;
+	background: #1E9FFF;
+	display:block;
+	font-size:16px;
+	color:#fff;
+	line-height:50px;
+	text-align:center;
+	display:block;
+	text-decoration:none;
+}
+.login-item{
+	margin-top:15px;
+	margin-left:20px;
+}
+#loginBox{
+	display:none;
+}

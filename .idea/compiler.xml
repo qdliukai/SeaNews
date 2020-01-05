@@ -9,8 +9,8 @@
         <module name="SeaNews" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="SeaNews" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="SeaNews" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,0 +1,85 @@
+input {
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	color: #000;
+	font-family: 'Opan Sans', sans-serif;
+	font-size: 1em;
+	height: 30px;
+	padding: 0 16px;
+	transition: background 0.3s ease-in-out;
+	width: 40%;
+}
+        
+input:focus {
+	outline: none;
+	border-color: #9ecaed;
+	box-shadow: 0 0 10px #9ecaed;
+}
+        
+.button {
+	height: 30px;
+	width: 60px;
+	background: #009dff;
+	border: none;
+	border-radius: 10px;
+	color: #fff;
+	cursor: pointer;
+	font-size:15px;
+	text-align: left;
+	transition: background 0.3s ease-in-out;
+}
+        
+.button:hover {
+	background: #00c8ff;
+}
+        
+.select {
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	color: #000;
+	font-family: 'Opan Sans', sans-serif;
+	font-size: 1.2em;
+	height: 35px;
+	padding: 0 19px;
+	transition: background 0.3s ease-in-out;
+	width: 50%;
+	line-height:35px;
+}
+        
+select:focus {
+	outline: none;
+	border-color: #9ecaed;
+	box-shadow: 0 0 10px #9ecaed;
+}
+
+.search {
+	margin: 0 auto;
+	height: 40px;
+	width: 90%;
+	border-radius: 15px;
+	outline: none;
+	padding-left: 20px;
+}
+.btn {
+	height: 32px;
+	width: 32px;
+	background: url(../images/search.png) no-repeat;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+}
+.btn:hover{
+	background: url(../images/searched.png) no-repeat;
+}
+
+/*去掉日期选择框的上下选择按钮*/
+input[type='date']::-webkit-inner-spin-button { display: none; }
+
+

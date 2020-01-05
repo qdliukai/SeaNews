@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper
+                PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 定义名字空间 -->
+<mapper namespace="users">
+    <!-- 定义insert语句 插入任务 -->
+    <insert id="insertSparkTask" parameterType="_Task">
+        insert into spark_task(userName, taskType, timeRange, taskTime)
+        values(#{userName},#{taskType}, #{timeRange}, #{taskTime});
+    </insert>
+    <!--定义更新语句，更新用户收藏，并判断字段是否为空，为空时不更新-->
+    <update id="updateUserCollect" parameterType="_User">
+        update user
+            <trim prefix="set" suffixOverrides=",">
+                <if test="userId != null">userId=#{userId},</if>
+                <if test="userName != null">userName=#{userName},</if>
+                <if test="userPassword != null">userPassword=#{userPassword},</if>
+                <if test="userCollect != null">userCollect=#{userCollect},</if>
+                <if test="userModel != null">userModel=#{userModel},</if>
+                <if test="userModelUpdateTime != null">userModelUpdateTime=#{userModelUpdateTime},</if>
+            </trim>
+        where userName = #{userName}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        delete from user where userId = #{userId}
+    </delete>
+
+    <!--查询某个用户的全部信息  resultType的_User是mybatis-config.xml中定义的别名-->
+    <select id="selectOne" parameterType="string" resultType="_User">
+        select * from user where userName = #{userName};
+    </select>
+
+    <select id="selectAll" resultType="_User">
+        select
+          userId,
+          userName,
+          userPassword,
+          userCollect,
+          userModel
+        from user;
+    </select>
+
+    <select id="selectPage" resultType="_User">
+        select *
+        from user limit #{offset},#{limit}
+    </select>
+    <select id="selectCount" resultType="int">
+        select count(1)
+        from user
+    </select>
+
+    <select id="selectTaskTypeLatest" parameterType="string" resultType="_Task">
+        select * from spark_task
+        where taskType=#{taskType}
+        and userName=#{userName}
+        ORDER BY taskTime
+        desc LIMIT 1;
+    </select>
+
+    <!--删除表中数据-->
+    <delete id="deleteTable">
+        delete from usertest
+    </delete>
+
+    <!--删除表-->
+    <delete id="dropTable">
+        drop table usertest
+    </delete>
+
+</mapper>

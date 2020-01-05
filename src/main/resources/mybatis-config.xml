@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--给类起别名-->
+    <typeAliases>
+        <typeAlias type="com.liukai.seanews.domain.User" alias="_User" />
+        <typeAlias type="com.liukai.seanews.domain.RecommendResult" alias="_RResult" />
+        <typeAlias type="com.liukai.seanews.domain.RecommendDetail" alias="_RDetail" />
+        <typeAlias type="com.liukai.seanews.domain.Task" alias="_Task" />
+    </typeAliases>
+    <!-- *****引入映射文件(新增部分)***** -->
+    <mappers>
+        <mapper resource="UserMapper.xml"/>
+        <mapper resource="RResultMapper.xml"/>
+    </mappers>
+</configuration>
